@@ -82,3 +82,21 @@ This guide explains how to create a **Laravel 12 project** with **Inertia.js** a
 ```bash
 composer create-project laravel/laravel laravel12-inertia-vue
 
+## Step 2 — Create Breeze
+
+```bash
+composer require laravel/breeze --dev
+```bash
+php artisan breeze:install vue
+
+## Step 3 — fix for work with tailwandcss
+
+```bash
+npm install -D @tailwindcss/typography
+
+## -> in tailwandcss.config.js 
+ plugins: [
+        forms, typography,
+        require('@tailwindcss/typography')
+    ],
+
